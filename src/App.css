@@ -1,8 +1,8 @@
 .home-farm{
-  background-image: url('./assets/farm.jpg');
+  background-image: url('./assets/Asset\ 1.png');
   background-size: 100% 80%;
   background-repeat: no-repeat;
-  height: 45vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,3 +13,47 @@
   box-shadow: 10px;
 }
 
+.learn-more{
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px;
+  width:20%;
+  cursor: pointer;
+}
+
+.learn-more-footer{
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px;
+  width:15%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.learn-more-footer:hover {
+  background-color: #d0db97;
+  color: green;
+  text-decoration: underline;
+}
+
+.learn-more:hover{
+  background-color: #d0db97;
+  color: green;
+  text-decoration: underline;
+}
+
+
+.vision{
+  background-image: url('./assets/Asset\ 2.png');
+  background-size: 100% 100%;
+}
+
+.footer-hover:hover{
+  color: green;
+  text-decoration: underline;
+  cursor: pointer;
+}
