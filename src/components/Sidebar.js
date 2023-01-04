@@ -34,6 +34,8 @@ export default function Sidebar() {
     boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
     backdropFilter: "blur(120px)",
     height: "calc(100vh - 62px)",
+    position:'sticky',
+    top:0,
 
     "@media (max-width: 700px)": {
       width: "40px",
@@ -120,11 +122,11 @@ export default function Sidebar() {
           {/* </Link> */}
         </Icon>
         <Icon>
-          {/* <Link to={"/projects"}> */}
+          <Link to={"/blogs"}>
             <TopicIcon
               sx={{
                 fontSize: 25,
-                color: location.pathname?.includes("/projects")
+                color: location.pathname?.includes("/blogs")
                   ? "green"
                   : "#6F6F6F",
                 "@media (max-width: 700px)": {
@@ -132,7 +134,7 @@ export default function Sidebar() {
                 },
               }}
             />
-          {/* </Link> */}
+          </Link>
         </Icon>
 
 

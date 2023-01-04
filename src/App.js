@@ -10,7 +10,11 @@ import { useEffect } from 'react';
 import { useStateValue } from './context/StateProvider';
 import { auth } from './firebase';
 import {RequireAuth} from './context/RequireAuth'
-
+import styled from "styled-components";
+import MainNavbar from './components/MainNavbar';
+import Sidebar from './components/Sidebar';
+import Body from './components/Body';
+import Blogs from './components/Blogs';
 // #4c6d0c
 // #d0db97
 
@@ -38,6 +42,10 @@ function App() {
   },[])
   console.log(user)
 
+  const SubContainer = styled("div")(() => ({
+    display: "flex",
+  }));
+
   return (
     <>
     {
@@ -58,6 +66,7 @@ function App() {
 
       <Route element={<RequireAuth />}>
         <Route exact path='/dashboard' element={<Dashboard />}/>
+        <Route exact path='/blogs' element={<Blogs />}/>
       </Route>
       
     </Routes>
@@ -65,7 +74,14 @@ function App() {
       !user &&
       <Footer />
       
-    }
+    } 
+
+
+   {/* <MainNavbar />
+      <SubContainer>
+        <Sidebar />
+        <Body />
+      </SubContainer> */}
     </>
   );
 }
