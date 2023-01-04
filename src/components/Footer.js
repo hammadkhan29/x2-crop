@@ -4,10 +4,21 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import '../App.css'
 import Logo from '../assets/150x150logo.png'
+import { useStateValue } from '../context/StateProvider';
 
 
 
 function Footer() {
+    const [{user}, dispatch]  =useStateValue();
+
+    const loginClick = () => {
+        if (!user) {
+            dispatch({
+                type: 'OPENLOGINDIALOG'
+            });
+        }
+    }
+
   return (
     <>
     <Box p={5} sx={{height:'max-content', backgroundColor:'#1a202c', display:'flex', justifyContent:'space-around'}}>
@@ -31,7 +42,7 @@ function Footer() {
                 <Typography mt={1} className='footer-hover' variant='subtitle2'>FAQ</Typography>
                 <Typography mt={1} className='footer-hover' variant='subtitle2'>Analytics</Typography>
                 <Typography mt={1} className='footer-hover' variant='subtitle2'>Sites/Locations</Typography>
-                <Typography mt={1} className='footer-hover' variant='subtitle2'>Login/Register</Typography>
+                <Typography mt={1} onClick={loginClick} className='footer-hover' variant='subtitle2'>Login/Register</Typography>
             </Stack>
         </Box>
     </Box>

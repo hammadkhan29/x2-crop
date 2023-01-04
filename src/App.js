@@ -46,18 +46,16 @@ function App() {
       <Box Box sx={{backgroundColor:'green', color:'white', height:'2.5vh',display:'flex', justifyContent:'space-around', alignItems:'center'}}>
         <Typography fontWeight={550}> A complete solution to your <strong>Farming needs</strong></Typography>           
       </Box>
-      {/* <Navbar /> */}
+      <Navbar />
       </>
     }
 
-    <Navbar />
+    {/* <Navbar /> */}
      
     
       <Routes>
-      {/* <Route exact path='/' element={<Home />}/>
-      <Route exact path='/interview' element={<Interview />}/>
-      <Route exact path='/result' element={<Results />}/> */}
       <Route exact path='/' element={<Home />}/>
+
       <Route element={<RequireAuth />}>
         <Route exact path='/dashboard' element={<Dashboard />}/>
       </Route>
