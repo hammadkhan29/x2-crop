@@ -22,18 +22,17 @@ export default function MainNavbar() {
 
   const Container = styled("div")(() => ({
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "62px",
-    background: "#FFFFFF",
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)",
-    // padding: "0px 20px",
-    top: "0px",
-    left: "0px",
-    width: "100vw",
-    zIndex: 100,
-    // position: "absolute",
-    position: "relative",
+        justifyContent: "space-between",
+        alignItems: "center",
+        height: "62px",
+        background: "#FFFFFF",
+        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)",
+        padding: "0px 20px",
+        top: "0px",
+        left: "0px",
+        width: "100%",
+        zIndex: 100,
+        position: "sticky",
   }));
 
   const RightHeader = styled("div")(() => ({

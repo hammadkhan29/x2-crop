@@ -13,6 +13,7 @@ import EqualizerIcon from "@mui/icons-material/Equalizer";
 import Badge from "@mui/material/Badge";
 import { Box } from "@mui/material";
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function Sidebar() {
   const location = useLocation();
@@ -25,7 +26,7 @@ export default function Sidebar() {
   const Container = styled("div")(() => ({
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
+    justifyContent: "space-between",
     // postion:'sticky',
     // top:0,
     alignItems: "center",
@@ -33,9 +34,11 @@ export default function Sidebar() {
     background: "#FFFFFF",
     boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
     backdropFilter: "blur(120px)",
-    height: "calc(100vh - 62px)",
+    // height: "calc(100vh - 62px)",
+    height:'100vh',
     position:'sticky',
-    top:0,
+    top: 56,
+    left: '500',
 
     "@media (max-width: 700px)": {
       width: "40px",
@@ -82,17 +85,17 @@ export default function Sidebar() {
           )}
         </Icon>
         <Icon>
-          {/* <Link to={"/profiledetail"}> */}
-            <PersonIcon
+          <Link to={"/locations"}>
+            <LocationOnIcon
               sx={{
                 fontSize: 25,
-                color: location.pathname === "/profiledetail" ? "green" : "#6F6F6F",
+                color: location.pathname === "/locations" ? "green" : "#6F6F6F",
                 "@media (max-width: 700px)": {
                   fontSize: 20,
                 },
               }}
             />
-          {/* </Link> */}
+          </Link>
         </Icon>
         <Icon>
           {/* <Link to={"/users"}> */}

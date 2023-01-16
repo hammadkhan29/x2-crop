@@ -15,6 +15,7 @@ import MainNavbar from './components/MainNavbar';
 import Sidebar from './components/Sidebar';
 import Body from './components/Body';
 import Blogs from './components/Blogs';
+import Map from './components/Map';
 // #4c6d0c
 // #d0db97
 
@@ -67,6 +68,8 @@ function App() {
       <Route element={<RequireAuth />}>
         <Route exact path='/dashboard' element={<Dashboard />}/>
         <Route exact path='/blogs' element={<Blogs />}/>
+        <Route exact path='/locations' element={<Map />}/>
+        
       </Route>
       
     </Routes>

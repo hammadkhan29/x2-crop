@@ -272,10 +272,11 @@ const Dashboard = () => {
 
     return (
         <>
+        <Box sx={{ width: '100%',display: "flex", flexDirection: "column"}} >
         <MainNavbar />
-        <Box sx={{display:'flex', width:'100vw'}} >
+        <Box sx={{display:'flex'}} >
             <Sidebar/>
-            <Box sx={{width: 'calc(100% - 62px)', maxHeight: "calc(100vh - 55px)"}}>
+            <Box sx={{ width: "calc(100% - 55px)", display: { sm: 'block', xs: 'flex' }, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
             <TitleContainer style={{ marginBottom: "30px" }}>
                     <Title>Dashboard</Title>
                 </TitleContainer>
@@ -414,6 +415,7 @@ const Dashboard = () => {
 
             </Box>
             
+            </Box>
             </Box>
             
             </>
