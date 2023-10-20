@@ -1,5 +1,4 @@
 
-import React from 'react'
 import blog1 from '../assets/farm1.jpeg'
 import blog2 from '../assets/farm2.jpeg'
 import blog3 from '../assets/farm3.jpeg'
